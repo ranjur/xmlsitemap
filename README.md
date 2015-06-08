@@ -1,7 +1,7 @@
 # xmlsitemap
 ### installation steps
 
-1. Add to settings.py
+Add to settings.py
 ```js
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -16,8 +16,7 @@ INSTALLED_APPS = (
 
 )
 ```
-
-2. Add to url.py
+Add to url.py
 ```js  
 urlpatterns = patterns('',
     #other urls
@@ -25,11 +24,10 @@ urlpatterns = patterns('',
 
 )
 ```
+You can see the available sitemaps in the url http://yourdomain/sitemap.xml
+You can add more sitemaps in the settings variable "XML_OTHER_SITEMAPS"
 
-3. You can see the available sitemaps in the url http://yourdomain/sitemap.xml
-
-4. You can add more sitemaps in the settings variable "XML_OTHER_SITEMAPS"
-#Example in your settings.py file
+Example in your settings.py file
 ```js
 from ***.sitemaps import TagSitemap,EntrySitemap
 from cms.sitemaps import CMSSitemap
@@ -39,5 +37,4 @@ XML_OTHER_SITEMAPS = {
  'cms_tags':CMSSitemap, # for cms sitemap
 }
 ```
-
-4. To add more static site map entries goto admin section http://yourdomain/admin/xmlsitemap/xmlsitemap/.
+To add more static site map entries goto admin section http://yourdomain/admin/xmlsitemap/xmlsitemap/.
