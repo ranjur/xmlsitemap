@@ -1,7 +1,9 @@
-To install this app xmlsitemap:
+# xmlsitemap
+### installation steps
 
-1.Add to settings.py
-    INSTALLED_APPS = (
+1. Add to settings.py
+```
+INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -13,6 +15,7 @@ To install this app xmlsitemap:
     'xmlsitemap',#required
 
 )
+```js
 
 2.add to url.py
   urlpatterns = patterns('',
