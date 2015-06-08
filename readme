@@ -17,22 +17,23 @@ INSTALLED_APPS = (
 )
 ```js
 
-2.add to url.py
-  urlpatterns = patterns('',
-        #other urls
-     url(r'^', include('xmlsitemap.urls')),
-     #other urls
+2. Add to url.py
+  
+urlpatterns = patterns('',
+    #other urls
+    url(r'^', include('xmlsitemap.urls')),
 
 )
 
-3.You can see the available sitemaps in the url http://yourdomain/sitemap.xml.
-4.You can add more sitemaps in the settings variable "XML_OTHER_SITEMAPS"
+3. You can see the available sitemaps in the url http://yourdomain/sitemap.xml.
+4. You can add more sitemaps in the settings variable "XML_OTHER_SITEMAPS"
 #Example in your settings.py file
-#from ***.sitemaps import TagSitemap,EntrySitemap
-#from cms.sitemaps import CMSSitemap
-#XML_OTHER_SITEMAPS = {
-#'blog':EntrySitemap,
-#'blog_tags':TagSitemap,
-#'cms_tags':CMSSitemap, # for cms sitemap
-#}
-4.To add more static site map entries goto admin section http://yourdomain/admin/xmlsitemap/xmlsitemap/.
+from ***.sitemaps import TagSitemap,EntrySitemap
+from cms.sitemaps import CMSSitemap
+XML_OTHER_SITEMAPS = {
+ 'blog':EntrySitemap,
+ 'blog_tags':TagSitemap,
+ 'cms_tags':CMSSitemap, # for cms sitemap
+}
+
+4. To add more static site map entries goto admin section http://yourdomain/admin/xmlsitemap/xmlsitemap/.
